@@ -10,20 +10,15 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     
     <style>
-        /* === YOUR PROFESSIONAL COLOR SYSTEM === */
         :root {
-            --primary: #FF6600;    /* Energy Orange */
-            --secondary: #000000;  /* Professional Black */
-            --accent: #A6E22E;     /* Lime Green - WhatsApp CTA */
-            --silver: #7D7D7D;     /* Automotive Silver */
-            --light: #F9F9F9;      /* Clean White */
-            --dark: #1A1A1A;       /* Dark Background */
+            --primary: #FF6600;
+            --secondary: #000000;
+            --accent: #A6E22E;
+            --silver: #7D7D7D;
+            --light: #F9F9F9;
+            --dark: #1A1A1A;
         }
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Poppins', sans-serif;
             background: var(--light);
@@ -35,7 +30,6 @@
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
         }
-        /* === STICKY PROFESSIONAL HEADER === */
         .professional-header {
             background: var(--secondary);
             position: fixed;
@@ -96,7 +90,6 @@
             justify-content: center;
             font-size: 1.2rem;
         }
-        /* === HERO SECTION - CONCEPT 1: BOLD & MODERN === */
         .hero-section {
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
                        url('your-warehouse-image.jpg');
@@ -130,7 +123,6 @@
             opacity: 0.9;
             max-width: 600px;
         }
-        /* === PROFESSIONAL BUTTONS === */
         .btn-primary {
             background: var(--primary);
             color: var(--light);
@@ -166,7 +158,6 @@
             transform: translateY(-3px);
             box-shadow: 0 12px 35px rgba(166, 226, 46, 0.4);
         }
-        /* === TRUST BADGES === */
         .trust-badges {
             display: flex;
             gap: 2rem;
@@ -180,7 +171,6 @@
             font-size: 1rem;
             opacity: 0.9;
         }
-        /* === CATEGORIES GRID === */
         .categories-section {
             padding: 6rem 2rem;
             background: var(--light);
@@ -233,7 +223,6 @@
             margin-bottom: 1rem;
             color: var(--secondary);
         }
-        /* === PRODUCTS SECTION === */
         .products-section {
             padding: 6rem 2rem;
             background: #f5f5f5;
@@ -279,7 +268,6 @@
             color: var(--primary);
             margin: 1rem 0;
         }
-        /* === TRUST SECTION === */
         .trust-section {
             background: var(--dark);
             color: var(--light);
@@ -307,7 +295,6 @@
             margin-bottom: 0.5rem;
             color: var(--accent);
         }
-        /* === FLOATING WHATSAPP === */
         .whatsapp-float {
             position: fixed;
             bottom: 2rem;
@@ -330,41 +317,22 @@
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
         }
-        /* === RESPONSIVE DESIGN === */
         @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            .main-nav {
-                gap: 1rem;
-            }
-            .hero-title {
-                font-size: 2.5rem;
-            }
-            .hero-buttons {
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-            }
-            .btn-secondary {
-                margin-left: 0;
-            }
-            .categories-grid,
-            .products-grid {
-                grid-template-columns: 1fr;
-            }
+            .header-container { flex-direction: column; gap: 1rem; }
+            .main-nav { gap: 1rem; }
+            .hero-title { font-size: 2.5rem; }
+            .hero-buttons { display: flex; flex-direction: column; gap: 1rem; }
+            .btn-secondary { margin-left: 0; }
+            .categories-grid, .products-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-    <!-- 🏢 STICKY PROFESSIONAL HEADER -->
     <header class="professional-header">
         <div class="header-container">
             <div class="logo">
                 GARAGE BAZAR <span>INDIA</span>
             </div>
-            
             <nav class="main-nav">
                 <a href="#home">Home</a>
                 <a href="#categories">Categories</a>
@@ -372,7 +340,6 @@
                 <a href="#about">About</a>
                 <a href="#contact">Contact</a>
             </nav>
-            
             <div class="header-contact">
                 <div class="contact-number">
                     <i class="fas fa-phone"></i> +91-7019193969
@@ -383,22 +350,18 @@
             </div>
         </div>
     </header>
-
-    <!-- 🌟 HERO SECTION - CONCEPT 1: BOLD & MODERN -->
     <section class="hero-section" id="home">
         <div class="hero-content">
             <h1 class="hero-title">India's Trusted Used Car Parts – Delivered Nationwide</h1>
             <p class="hero-subtitle">Prepaid Orders with Video Proof & GST Invoice | Engines, Gearboxes, Lights & More</p>
-            
             <div class="hero-buttons">
-                <button class="btn-primary" onclick="scrollToCategories()">
+                <button class="btn-primary" onclick="document.getElementById('categories').scrollIntoView({behavior: 'smooth'});">
                     <i class="fas fa-search"></i> BROWSE PARTS
                 </button>
                 <button class="btn-secondary" onclick="openWhatsApp()">
                     <i class="fab fa-whatsapp"></i> ORDER VIA WHATSAPP
                 </button>
             </div>
-            
             <div class="trust-badges">
                 <div class="trust-badge">
                     <i class="fas fa-check-circle"></i> GST Verified
@@ -412,14 +375,11 @@
             </div>
         </div>
     </section>
-
-    <!-- 🏗️ CATEGORIES SECTION -->
     <section class="categories-section" id="categories">
         <div class="section-header">
             <h2 class="section-title">Shop by Category</h2>
             <p class="section-subtitle">Find the perfect part for your vehicle from our quality-tested inventory</p>
         </div>
-        
         <div class="categories-grid">
             <div class="category-card" onclick="filterCategory('engines')">
                 <div class="category-icon">🚗</div>
@@ -453,14 +413,11 @@
             </div>
         </div>
     </section>
-
-    <!-- 📦 FEATURED PRODUCTS -->
     <section class="products-section" id="products">
         <div class="section-header">
             <h2 class="section-title">Featured Parts</h2>
             <p class="section-subtitle">Popular quality-tested components ready for immediate shipping</p>
         </div>
-        
         <div class="products-grid">
             <div class="product-card">
                 <div class="product-image">🚗</div>
@@ -497,8 +454,6 @@
             </div>
         </div>
     </section>
-
-    <!-- 🛡️ TRUST & STATS SECTION -->
     <section class="trust-section">
         <div class="trust-grid">
             <div class="trust-item">
@@ -523,16 +478,12 @@
             </div>
         </div>
     </section>
-
-    <!-- 💬 FLOATING WHATSAPP BUTTON -->
     <a href="https://wa.me/917019193969?text=Hello%20Garage%20Bazar%20India!%20I%20need%20quality%20car%20parts." 
        class="whatsapp-float" 
        target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
-
     <script>
-        // === PROFESSIONAL WEBSITE FUNCTIONALITY ===
         function openWhatsApp() {
             const phone = "917019193969";
             const message = "Hello Garage Bazar India! I'm interested in your quality parts. Please share your catalog and best prices.";
